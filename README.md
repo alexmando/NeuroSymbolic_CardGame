@@ -1,3 +1,30 @@
+NeuroSymbolic AI - Card Suit Game 🃏
+
+University project for the Neuro-Symbolic AI course.
+The primary objective of this project is to develop and compare two different AI systems capable of predicting the outcome of a card game by observing only the images of the two played cards.
+
+📜 Game Rules
+
+The game relies exclusively on card suits, entirely ignoring numerical ranks and face cards. It follows a circular logic:
+
+Hearts beats Clubs
+
+Clubs beats Spades
+
+Spades beats Hearts
+
+Two cards of the same suit result in a Draw
+
+Note: The Diamonds suit and Jokers are strictly excluded from this game.
+
+🏗️ Project Architecture & Comparison
+
+To evaluate the benefits of neuro-symbolic integration, we will implement and compare two distinct approaches:
+
+Approach A (DeepProbLog): A pure neuro-symbolic system. A Convolutional Neural Network (CNN) will handle the perception task (assigning a probability distribution over the suits of a single card). The ProbLog logic engine will then deduce the final outcome by applying explicit symbolic game rules to those probabilities.
+
+Approach B (Neural Baseline): A purely sub-symbolic system (e.g., a Siamese Network). The neural network will process both card images simultaneously and attempt to predict the final outcome directly (Player 1 Wins, Player 2 Wins, or Draw), relying solely on data-driven learning without any explicit logical rules.
+
 📂 Dataset & Transformation Strategy ("The Manifest")
 
 The base dataset used is the Cards Image Dataset-Classification from Kaggle.
